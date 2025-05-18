@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Nest - Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="hero-header">
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <img src="images/logo2.png" alt="logo">
+            </div>
+            <!-- Add this inside your navbar-left div, after the logo -->
+<button class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+</button>
+            <ul class="nav-links" id="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#categories">Categories</a></li>
+				<li><a href="#bestsellers">Access</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+        </div>
+        
+            <div class="navbar-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." id="search-input">
+                    <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="theme-toggle" id="toggle-mode" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </div>
+                <div class="login" >
+                    <a href="login.html" class="login-btn" id="user-btn">
+                        <i class="fas fa-user"></i>
+                        <span class="login-text">Login</span>
+                    </a>
+                </div>
+                <div class="cart-container">
+                <button class="cart-trigger" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+            
+                <div class="cart-panel" id="cart-panel">
+                    <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <button class="close-cart">&times;</button>
+                    </div>
+                    <div class="cart-body">
+                    <ul class="cart-items">
+                        <li class="empty-cart">Your cart is empty</li>
+                    </ul>
+                    </div>
+                    <div class="cart-footer">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">$0.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </nav>
+</header>
+<!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Discover Your Next Favorite Book</h2>
+                <p>Explore our vast collection of books across all genres. From bestsellers to hidden gems, we have something for every reader.</p>
+                <a href="#categories" class="btn">Browse Categories</a>
+            </div>
+        </div>
+    </section>
+        <!-- Our Story section -->
+        <section class="our-story" id="about">
+            <div class="container">
+                <div class="story-image">
+                    <img src="images/store.png">
+                </div>
+                <div class="story-content">
+                    <h2>About Our Bookstore</h2>
+                    <p>At cumque tenetur iste molestiae, vel eum reiciendis assumenda! Numquam, repudiandae. Consequuntur obcaecati recusandae aliquam, amet doloribus eius dolores officiis cumque? ipsam aliquid deleniti assumenda culpa deserunt.</p>
+                    <a href="#" class="btn2">Learn More<i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Book Categories</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="fiction">
+                    <img src="images/fiction.avif" alt="Fiction">
+                    <h3>Fiction</h3>
+                </div>
+                <div class="category-card" data-category="non-fiction">
+                    <img src="images/non fiction.avif" alt="Non-Fiction">
+                    <h3>Non-Fiction</h3>
+                </div>
+                <div class="category-card" data-category="mystery">
+                    <img src="images/mystery.avif" alt="Mystery">
+                    <h3>Mystery</h3>
+                </div>
+                <div class="category-card" data-category="sci-fi">
+                    <img src="images/scifi book.avif" alt="Sci-Fi">
+                    <h3>Sci-Fi</h3>
+                </div>
+                <div class="category-card" data-category="romance">
+                    <img src="images/romance book.avif" alt="Romance">
+                    <h3>Romance</h3>
+                </div>
+                <div class="category-card" data-category="biography">
+                    <img src="images/biography.avif" alt="Biography">
+                    <h3>Biography</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestsellers Section -->
+    <section class="bestsellers" id="bestsellers">
+        <div class="container">
+            <h2 class="section-title">Bestsellers</h2>
+            <div class="book-grid">
+                <!-- Book 1 -->
+                <div class="book-card">
+                    <img src="images/harrypoter.jpg" alt="Book Title 1" class="book-cover">
+                    <h3 class="book-title">Harry Potter</h3>
+                    <p class="book-author">by J. K. Rowling</p>
+                    <p class="book-price">$12.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Book 2 -->
+                <div class="book-card">
+                    <img src="images/book 3.jpg" alt="Book Title 2" class="book-cover">
+                    <h3 class="book-title">Nectar on the Seven Hills</h3>
+                    <p class="book-author">Prabhu Ram</p>
+                    <p class="book-price">$14.50</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Book 3 -->
+                <div class="book-card">
+                    <img src="images/atomic habit.webp" alt="Book Title 3" class="book-cover">
+                    <h3 class="book-title">Atomic Habits</h3>
+                    <p class="book-author">by James Clear</p>
+                    <p class="book-price">$16.00</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Book 4 -->
+                <div class="book-card">
+                    <img src="images/universe ook.jpg" alt="Book Title 4" class="book-cover">
+                    <h3 class="book-title">The Mysteries of the Universe</h3>
+                    <p class="book-author">by Will Gater</p>
+                    <p class="book-price">$11.75</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <a href="#" class="btn view-all">View All Bestsellers</a>
+        </div>
+    </section>
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get updates on new releases, special offers, and reading recommendations.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading, UK</p>
+                    <p><i class="fas fa-phone"></i> +44 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@booknest.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-goodreads"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BookNest</h3>
+                    <p>Your one-stop destination for all things books. We're passionate about connecting readers with great literature.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-goodreads"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#bestsellers">Bestsellers</a></li>
+                        
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Store Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading, bhubaneswer</p>
+                    <p><i class="fas fa-phone"></i> +44 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@booknest.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookNest. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

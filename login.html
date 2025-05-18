@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookNest - Login- Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+  <style>
+    :root {
+      --light-bg: linear-gradient(to right, #74ebd5, #acb6e5);
+      --dark-bg: #121212f0;
+      --dark-card: #1e1e1e;
+      --dark-input: #2a2a2a;
+      --text-light: #ffffff;
+      --text-muted: #aaa;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+@media (max-width: 480px) {
+      .login-container {
+        padding: 20px;
+      }
+    }
+body.dark-mode {
+      background: var(--dark-bg);
+    }
+
+    body.dark-mode .login-container {
+      background: var(--dark-card);
+      color: var(--text-light);
+    }
+
+    body.dark-mode h2,
+    body.dark-mode label {
+      color: var(--text-light);
+    }
+
+    body.dark-mode input {
+      background-color: var(--dark-input);
+      color: var(--text-light);
+      border: 1px solid #444;
+    }
+    body.dark-mode input::placeholder {
+      color: var(--text-muted);
+    }
+
+    body.dark-mode #togglePassword {
+      color: var(--text-muted);
+    }
+
+    body.dark-mode button {
+      background-color: #333;
+      color: #fff;
+    }
+
+    body.dark-mode button:hover {
+      background-color: #555;
+    }
+
+    body.dark-mode .message {
+      color: #f88;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="hero-header">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="logo">
+          <img src="images/logo2.png" alt="logo">
+        </div>
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#bestsellers">Access</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <div class="search-bar">
+          <input type="text" placeholder="Search..." id="search-input">
+          <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="theme-toggle" id="toggle-mode" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="login-container">
+    <form id="loginForm">
+      <h2>Login</h2>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Enter your password" required>
+          <span id="togglePassword">👁️</span>
+        </div>
+      </div>
+
+      <button type="submit">Login</button>
+
+      <p class="message" id="message"></p>
+    </form>
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  
+
+</body>
+</html>
